@@ -18,7 +18,7 @@ public class RealEstateBO {
 		return realEstateMapper.selectRealEstateById(id);
 	}
 	
-	public List<RealEstate> getRealEstateByRent_price(int rent_price) {
-		return realEstateMapper.selectRealEstateByRent_price(rent_price);
+	public List<RealEstate> getRealEstateListByRentPrice(int rentPrice) {
+		return realEstateMapper.selectRealEstateListByRentPrice(rentPrice);
 	}
 }

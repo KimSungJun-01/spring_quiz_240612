@@ -11,5 +11,5 @@ public interface RealEstateMapper {
 	
 	public RealEstate selectRealEstateById(int id);
 	
-	public List<RealEstate> selectRealEstateByRent_price(int rent_price);
+	public List<RealEstate> selectRealEstateListByRentPrice(int rentPrice);
 }
