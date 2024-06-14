@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.quiz.lesson03.bo.RealEstateBO;
 import com.quiz.lesson03.domain.RealEstate;
 
+@RequestMapping("/lesson03/quiz01")
 @RestController
 public class Lesson03Quiz01RestController {
 	
@@ -17,14 +18,14 @@ public class Lesson03Quiz01RestController {
 	private RealEstateBO realEstateBO;
 	
 	// http://localhost:8080/lesson03/quiz01/1?id=20
-	@RequestMapping("/lesson03/quiz01/1")
+	@RequestMapping("/1")
 	public RealEstate quiz01_1(
 			@RequestParam("id") int id) {
 		return realEstateBO.getRealEstateById(id);
 	}
 	
 	// http://localhost:8080/lesson03/quiz01/2?rent_price=90
-	@RequestMapping("/lesson03/quiz01/2")
+	@RequestMapping("/2")
 	public List<RealEstate> quiz01_2(
 			@RequestParam("rent_price") int rent_price) {
 		return realEstateBO.getRealEstateByRent_price(rent_price);
