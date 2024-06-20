@@ -14,10 +14,10 @@ public class SellerBO {
 	
 	// input : 파라미터들
 	// output : x
-	public void addSeller(String nickname11111, 
-			String profileUrl22222, double temperature33333) {
+	public void addSeller(String nickname, 
+			String profileUrl, double temperature) {
 		
-		sellerMapper.insertSeller(nickname11111, profileUrl22222, temperature33333);
+		sellerMapper.insertSeller(nickname, profileUrl, temperature);
 	}
 	
 	// input : x

@@ -49,6 +49,4 @@ public class Seller {
 	public void setUpdatedAt(LocalDateTime updatedAt) {
 		this.updatedAt = updatedAt;
 	}
-	
-	
 }
