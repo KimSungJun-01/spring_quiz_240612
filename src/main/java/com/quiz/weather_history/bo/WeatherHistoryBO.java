@@ -19,4 +19,10 @@ public class WeatherHistoryBO {
 	public List<WeatherHistory> getWeatherHistoryList() {
 		return weatherHistoryMapper.selectWeatherHistoryList();
 	}
+	
+	// input : date, weather, microDust, temperatures, precipitation, windSpeed
+	// output : x
+	public void addWeatherHistory(String date, String weather, String microDust, double temperatures, double precipitation, double windSpeed) {
+		weatherHistoryMapper.insertWeatherHistory(date, weather, microDust, temperatures, precipitation, windSpeed);
+	}
 }

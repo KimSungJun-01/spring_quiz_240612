@@ -1,8 +1,10 @@
 package com.quiz.weather_history;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,8 +14,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.quiz.weather_history.bo.WeatherHistoryBO;
 import com.quiz.weather_history.domain.WeatherHistory;
-
-import jakarta.servlet.http.HttpServletResponse;
 
 @RequestMapping("/weather-history")
 @Controller
@@ -55,8 +55,9 @@ public class WeatherHistoryController {
 			 @RequestParam("windSpeed") double windSpeed) {
 		
 		// DB insert
+		weatherHistoryBO.addWeatherHistory(date, weather, microDust, temperatures, precipitation, windSpeed);
 		
 		// redirect => 날씨 목록
-		return "recirect:http://localhost:8080/weather-history/weather-list-view";
+		return "redirect:/weather-history/weather-list-view";
 	}
 }

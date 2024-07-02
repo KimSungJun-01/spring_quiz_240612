@@ -15,7 +15,7 @@ public class Lesson02Quiz01RestController {
 	@Autowired
 	private StoreBO storeBO;
 	
-	// http://localhost/lesson02/quiz01
+	// http://localhost:8080/lesson02/quiz01
 	@RequestMapping("/lesson02/quiz01")
 	public List<Store> quiz01() {
 		return storeBO.getStoreList();

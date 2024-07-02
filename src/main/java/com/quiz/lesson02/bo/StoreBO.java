@@ -14,6 +14,8 @@ public class StoreBO {
 	@Autowired
 	private StoreMapper storeMapper;
 	
+	// input : x
+	// output : List<Store>
 	public List<Store> getStoreList() {
 		return storeMapper.selectStoreList();
 	}

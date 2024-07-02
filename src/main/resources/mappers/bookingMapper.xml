@@ -2,18 +2,19 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
- <mapper namespace="com.quiz.lesson02.mapper.StoreMapper">
- 	<select id="selectStoreList" resultType="com.quiz.lesson02.domain.Store">
+ <mapper namespace="com.quiz.booking.mapper.BookingMapper">
+ 	<select id="selectBookingList" resultType="com.quiz.booking.domain.Booking">
  		SELECT
  			`id`
 			,`name`
+			,`headcount`
+			,`day`
+			,`date`
 			,`phoneNumber`
-			,`address`
-			,`businessNumber`
-			,`introduce`
+			,`state`
 			,`createdAt`
 			,`updatedAt`
 		FROM
-			`store`
+			`booking`
  	</select>
  </mapper>

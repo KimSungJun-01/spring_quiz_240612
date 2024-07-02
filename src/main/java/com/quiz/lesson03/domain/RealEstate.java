@@ -69,5 +69,5 @@ public class RealEstate {
 	}
 	public void setUpdatedAt(LocalDateTime updatedAt) {
 		this.updatedAt = updatedAt;
-	}	
+	}
 }
